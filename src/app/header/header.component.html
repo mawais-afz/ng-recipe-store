@@ -1,25 +1,25 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">ng-recipe-store</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
-      aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+    <button aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"
+            data-bs-target="#navbarColor01" data-bs-toggle="collapse" type="button">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarColor01">
       <ul class="navbar-nav me-auto">
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="[ '/recipes' ]" routerLinkActive="active">Recipes</a>
+          <a [routerLink]="[ '/recipes' ]" class="nav-link" routerLinkActive="active">Recipes</a>
         </li>
-        <li class="nav-item"><a class="nav-link" [routerLink]="[ '/shopping-list' ]" routerLinkActive="active">Shopping
-            List</a></li>
+        <li class="nav-item"><a [routerLink]="[ '/shopping-list' ]" class="nav-link" routerLinkActive="active">Shopping
+          List</a></li>
       </ul>
     </div>
   </div>
   <div class="btn-group navbar-right" dropdown>
-    <a class="nav-link dropdown-toggle" dropdownToggle data-bs-toggle="dropdown" href="#" role="button"
-      aria-haspopup="true" aria-expanded="false">Manage</a>
-    <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu" role="menu" aria-labelledby="button-basic">
+    <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
+       dropdownToggle role="button">Manage</a>
+    <ul *dropdownMenu aria-labelledby="button-basic" class="dropdown-menu" id="dropdown-basic" role="menu">
       <li role="menuitem"><a class="dropdown-item" role="button">Save Data</a></li>
       <li role="menuitem"><a class="dropdown-item" role="button">Fetch Data</a></li>
 
