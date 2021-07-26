@@ -8,19 +8,21 @@
 
     <div class="collapse navbar-collapse" id="navbarColor01">
       <ul class="navbar-nav me-auto">
-        <li class="nav-item"><a  class="nav-link" href="#" (click)="onSelect('recipe')">Recipes</a></li>
-        <li class="nav-item"><a class="nav-link" href="#" (click)="onSelect('shopping-list')">Shopping List</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true"
-            aria-expanded="false">Manage</a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Save Data</a>
-            <a class="dropdown-item" href="#">Fetch Data</a>
-          </div>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="[ '/recipes' ]" routerLinkActive="active">Recipes</a>
         </li>
+        <li class="nav-item"><a class="nav-link" [routerLink]="[ '/shopping-list' ]" routerLinkActive="active">Shopping
+            List</a></li>
       </ul>
     </div>
+  </div>
+  <div class="btn-group navbar-right" dropdown>
+    <a class="nav-link dropdown-toggle" dropdownToggle data-bs-toggle="dropdown" href="#" role="button"
+      aria-haspopup="true" aria-expanded="false">Manage</a>
+    <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu" role="menu" aria-labelledby="button-basic">
+      <li role="menuitem"><a class="dropdown-item" role="button">Save Data</a></li>
+      <li role="menuitem"><a class="dropdown-item" role="button">Fetch Data</a></li>
+
+    </ul>
   </div>
 </nav>
